@@ -1,1 +1,1 @@
-- [Arduboy development with Visual Studio Communitu 2015](IDE/VS2015/README.md)
+- [Arduboy development with Visual Studio Community 2015](IDE/VS2015/README.md)
