@@ -101,10 +101,10 @@ Please be careful before code distribution.
 
 The `.vcxproj` file contains the environment dependent path. For example,
 
-- Library path on `%AppData`
+- Library path on `%AppData%`
 - Sketch file's directory
-- `%USERPROFILE`\Documents\Arduino\libraries
-- and Arduino IDE files on `ProgramFiles(x86)`
+- `%USERPROFILE%`\Documents\Arduino\libraries
+- and Arduino IDE files on `%ProgramFiles(x86)%`
 
 In `.vcxproj` file, all environment variables are extracted to actual paths. So user account name may be included in there. `%AppData` contains Windows user accout name.
 
@@ -117,4 +117,4 @@ In `.vcxproj` file, all environment variables are extracted to actual paths. So 
  - Debug
  - Release
  
-Usually `.ino`, `.cpp`, `.h` are required for Arduino IDE.
+Usually `.ino`, `.cpp` and `.h` are required for Arduino IDE.
