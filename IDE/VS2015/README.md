@@ -1,3 +1,6 @@
+edit:
+Add tips about `.vcxproj`.
+
 Arduboy is a hardware development platform based on Arduino. And, there is Visual Studio plugin for Arduino development. If we can use this plugin, it is useful because we can use code completion.
 
 [Arduino Plugin for Visual Studio](http://www.visualmicro.com/)
@@ -87,3 +90,31 @@ Maybe, some header files are missing. For example, in order to use the EEPROM va
 ```cpp
 #include <eeprom.h>
 ```
+
+#### .vcxproj contains environment dependent paths
+
+```
+I received information via Twitter. Thanks @koteitan!
+```
+
+Please be careful before code distribution.
+
+The `.vcxproj` file contains the environment dependent path. For example,
+
+- Library path on `%AppData`
+- Sketch file's directory
+- `%USERPROFILE`\Documents\Arduino\libraries
+- and Arduino IDE files on `ProgramFiles(x86)`
+
+In `.vcxproj` file, all environment variables are extracted to actual paths. So user account name may be included in there. `%AppData` contains Windows user accout name.
+
+ I think that we should exclude the files which are created by Arduino Plugin.
+ 
+ - *.sln
+ - *.vcxproj
+ - *.vcxproj.filters
+ - __vm/
+ - Debug
+ - Release
+ 
+Usually `.ino`, `.cpp`, `.h` are required for Arduino IDE.
