@@ -106,7 +106,7 @@ The `.vcxproj` file contains the environment dependent path. For example,
 - `%USERPROFILE%`\Documents\Arduino\libraries
 - and Arduino IDE files on `%ProgramFiles(x86)%`
 
-In `.vcxproj` file, all environment variables are extracted to actual paths. So user account name may be included in there. `%AppData%` contains Windows user accout name.
+In `.vcxproj` file, above environment variables are extracted to actual paths. So user account name may be included in there. `%AppData%` contains Windows user accout name.
 
  I think that we should exclude the files which are created by Arduino Plugin.
  
